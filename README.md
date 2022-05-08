@@ -12,5 +12,4 @@
 
 - Nama Perusahaan : PT XERANTA MOBILE SOLUTION
 - Posisi : Web Programmer
-- Status : Karyawan Kontrak
 - Periode : 04 Oktober 2021 Sampai Sekarang
