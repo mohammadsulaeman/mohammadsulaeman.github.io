@@ -11,5 +11,5 @@
 - Periode : 04 Januari 2021 Sampai 31 Maret 2021
 
 - Nama Perusahaan : PT XERANTA MOBILE SOLUTION
-- Posisi : Web Programmer
+- Posisi : Staff IT
 - Periode : 04 Oktober 2021 Sampai Sekarang
