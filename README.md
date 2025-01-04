@@ -12,4 +12,8 @@
 
 - Nama Perusahaan : PT XERANTA MOBILE SOLUTION
 - Posisi : Staff IT
-- Periode : 04 Oktober 2021 Sampai Sekarang
+- Periode : 04 Oktober 2021 Sampai 16 Oktober 2023
+
+- Nama Perusahaan : PT INFOVESTA UTAMA
+- Posisi : Application Developer
+- Periode : 16 Oktober 2023 Sampai Sekarang
