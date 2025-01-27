@@ -11751,4 +11751,17 @@ html {
   body {
     margin: 0;
   }
+
+  .video-size {
+        width: 20%; /* Video akan menyesuaikan dengan lebar kolom */
+        /* Batas maksimal lebar video  max-width: 30%; */
+        height: 20%; /* Video tetap proporsional */
+  }
+
+  .video-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
 }
