@@ -16,4 +16,4 @@
 
 3 Nama Perusahaan : PT INFOVESTA UTAMA
   - Posisi : Application Developer
-  - Periode : 16 Oktober 2023 Sampai Sekarang
+  - Periode : 16 Oktober 2023 Sampai 30 Januari 2026
