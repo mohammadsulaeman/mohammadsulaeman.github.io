@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Project</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            background:#f5f5f5;
+        }
+
+        .project-row{
+            display:none;
+            background:#fff;
+        }
+
+        .detail-container{
+            display:none;
+        }
+
+        .project-item{
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .project-item:hover{
+            background:#f8f9fa;
+            transform:translateX(5px);
+        }
+
+        .projectVideo{
+            width:100%;
+            border-radius:10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+
+    <h2 class="text-center mb-4">
+        Portfolio Project
+    </h2>
+
+    <div class="table-responsive">
+
+        <table class="table table-bordered table-hover align-middle bg-white">
+
+            <thead class="table-dark">
+            <tr>
+                <th width="80">No</th>
+                <th>Technology</th>
+                <th width="180">Total Project</th>
+                <th width="120">Action</th>
+            </tr>
+            </thead>
+
+            <tbody>
+
+            <!-- ANDROID -->
+            <tr>
+                <td>1</td>
+                <td>Android Java</td>
+                <td>3</td>
+                <td>
+                    <button class="btn btn-primary btn-sm"
+                            onclick="toggleProjects('androidProjects')">
+                        Detail
+                    </button>
+                </td>
+            </tr>
+
+            <tr id="androidProjects" class="project-row">
+                <td colspan="4">
+
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4>Android Java Projects</h4>
+
+                        <button class="btn btn-danger btn-sm"
+                                onclick="closeProjects('androidProjects','androidDetail')">
+                            Close List
+                        </button>
+                    </div>
+
+                    <div class="list-group">
+
+                        <button class="list-group-item list-group-item-action project-item"
+                                onclick="showProject(
+                                'Sales Mobile',
+                                'Aplikasi mobile untuk sales dan tracking lokasi.',
+                                'Java, SQLite, REST API',
+                                'videos/android1.mp4',
+                                'androidDetail'
+                                )">
+                            Sales Mobile
+                        </button>
+
+                        <button class="list-group-item list-group-item-action project-item"
+                                onclick="showProject(
+                                'Attendance App',
+                                'Aplikasi absensi dengan GPS dan selfie.',
+                                'Java, Firebase',
+                                'videos/android2.mp4',
+                                'androidDetail'
+                                )">
+                            Attendance App
+                        </button>
+
+                        <button class="list-group-item list-group-item-action project-item"
+                                onclick="showProject(
+                                'Delivery Tracking',
+                                'Tracking pengiriman realtime.',
+                                'Java, Google Maps API',
+                                'videos/android3.mp4',
+                                'androidDetail'
+                                )">
+                            Delivery Tracking
+                        </button>
+
+                    </div>
+
+                    <!-- DETAIL -->
+                    <div class="card mt-4 detail-container" id="androidDetail">
+
+                        <div class="card-header d-flex justify-content-between align-items-center">
+
+                            <h4 class="projectTitle mb-0"></h4>
+
+                            <button class="btn btn-secondary btn-sm"
+                                    onclick="closeDetail('androidDetail')">
+                                Close Detail
+                            </button>
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <h5>Deskripsi</h5>
+                            <p class="projectDescription"></p>
+
+                            <hr>
+
+                            <h5>Spesifikasi</h5>
+                            <p class="projectSpecification"></p>
+
+                            <hr>
+
+                            <h5>Video Project</h5>
+
+                            <video controls class="projectVideo">
+                                <source src="" type="video/mp4">
+                            </video>
+
+                        </div>
+
+                    </div>
+
+                </td>
+            </tr>
+
+            <!-- SPRING BOOT -->
+            <tr>
+                <td>2</td>
+                <td>Spring Boot</td>
+                <td>3</td>
+                <td>
+                    <button class="btn btn-primary btn-sm"
+                            onclick="toggleProjects('springProjects')">
+                        Detail
+                    </button>
+                </td>
+            </tr>
+
+            <tr id="springProjects" class="project-row">
+                <td colspan="4">
+
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4>Spring Boot Projects</h4>
+
+                        <button class="btn btn-danger btn-sm"
+                                onclick="closeProjects('springProjects','springDetail')">
+                            Close List
+                        </button>
+                    </div>
+
+                    <div class="list-group">
+
+                        <button class="list-group-item list-group-item-action project-item"
+                                onclick="showProject(
+                                'Hospital Information System',
+                                'Backend untuk sistem rumah sakit.',
+                                'Spring Boot, MySQL, Redis',
+                                'videos/spring1.mp4',
+                                'springDetail'
+                                )">
+                            Hospital Information System
+                        </button>
+
+                        <button class="list-group-item list-group-item-action project-item"
+                                onclick="showProject(
+                                'Authentication Service',
+                                'Microservice autentikasi menggunakan JWT.',
+                                'Spring Security, JWT',
+                                'videos/spring2.mp4',
+                                'springDetail'
+                                )">
+                            Authentication Service
+                        </button>
+
+                        <button class="list-group-item list-group-item-action project-item"
+                                onclick="showProject(
+                                'Payment Gateway',
+                                'Integrasi payment gateway.',
+                                'Spring Boot, REST API',
+                                'videos/spring3.mp4',
+                                'springDetail'
+                                )">
+                            Payment Gateway
+                        </button>
+
+                    </div>
+
+                    <div class="card mt-4 detail-container" id="springDetail">
+
+                        <div class="card-header d-flex justify-content-between align-items-center">
+
+                            <h4 class="projectTitle mb-0"></h4>
+
+                            <button class="btn btn-secondary btn-sm"
+                                    onclick="closeDetail('springDetail')">
+                                Close Detail
+                            </button>
+
+                        </div>
+
+                        <div class="card-body">
+
+                            <h5>Deskripsi</h5>
+                            <p class="projectDescription"></p>
+
+                            <hr>
+
+                            <h5>Spesifikasi</h5>
+                            <p class="projectSpecification"></p>
+
+                            <hr>
+
+                            <h5>Video Project</h5>
+
+                            <video controls class="projectVideo">
+                                <source src="" type="video/mp4">
+                            </video>
+
+                        </div>
+
+                    </div>
+
+                </td>
+            </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script>
+
+function toggleProjects(id){
+
+    const row = document.getElementById(id);
+
+    if(row.style.display === 'table-row'){
+        row.style.display = 'none';
+    }else{
+        row.style.display = 'table-row';
+    }
+}
+
+function showProject(
+    title,
+    description,
+    specification,
+    video,
+    detailId
+){
+
+    const detail = document.getElementById(detailId);
+
+    detail.querySelector('.projectTitle').innerText = title;
+    detail.querySelector('.projectDescription').innerText = description;
+    detail.querySelector('.projectSpecification').innerText = specification;
+
+    const videoElement = detail.querySelector('.projectVideo');
+
+    videoElement.querySelector('source').src = video;
+
+    videoElement.load();
+
+    detail.style.display = 'block';
+}
+
+function closeDetail(detailId){
+
+    const detail = document.getElementById(detailId);
+
+    const video = detail.querySelector('.projectVideo');
+
+    video.pause();
+    video.currentTime = 0;
+
+    detail.style.display = 'none';
+}
+
+function closeProjects(projectId, detailId){
+
+    closeDetail(detailId);
+
+    document.getElementById(projectId).style.display = 'none';
+}
+
+</script>
+
+</body>
+</html>

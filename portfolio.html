@@ -16,6 +16,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+         <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body class="d-flex flex-column h-100 bg-light">
         <main class="flex-shrink-0">
@@ -29,7 +31,7 @@
                             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
                             <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="portfolio.html">Eksplorasi Teknologi</a></li>
                             <!-- <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> -->
                         </ul>
                     </div>
@@ -40,190 +42,246 @@
                 <div class="container px-5 mb-5">
                     <div class="text-center mb-5">
                         <h1 class="display-5 fw-bolder mb-0">
-                            <span class="text-gradient d-inline">Portfolio</span>
+                            <span class="text-gradient d-inline">Eksplorasi Teknologi</span>
                         </h1>
                          <p>
-                         Proyek dan eksperimen yang saya bangun untuk mengasah kemampuan teknis serta mengimplementasikan berbagai teknologi secara langsung.  
+                         Kumpulan proyek dan eksperimen yang saya kembangkan untuk memperdalam kompetensi di bidang
+                         pengembangan perangkat lunak, mengimplementasikan berbagai teknologi modern, serta
+                         menerapkan praktik terbaik dalam membangun aplikasi yang aman, skalabel, dan mudah dipelihara.
                         </p>
                     </div>
-                    <div class="row gx-5 justify-content-center">
-                        <!-- Project Card 1 -->
-                        <div class="col-md-6 mb-4">
-                            <div class="card overflow-hidden shadow rounded-4 border-0 h-100">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-3">
-                                            <h4 class="fw-bolder">Spring Boot Redis Example</h4>
-                                            <p>
-                                                Implementasi Redis pada aplikasi Spring Boot untuk memahami mekanisme caching dan menganalisis dampaknya terhadap performa, 
-                                                pengurangan beban database, serta waktu respons aplikasi.
-                                            </p>
-                                            <p>
-                                                 Tech Stack: Java 17, Spring Boot 3, Spring Data JPA, Redis Cache, MySQL, Maven, Lombok.
-                                            </p>
-                                            <p>
-                                             <a href="https://github.com/mohammadsulaeman/spring-data-redis-mysql.git" target="_blank">Github Repository </a>  
-                                            </p>
-                                        </div>
-                                        <div class="img-fluid">
-                                            <video width="320" height="240" controls>
-                                                <source src="assets/video/Spring Boot.mp4" type="video/mp4">
-                                            </video>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Project Card 2 Udemy SpringBoot Secure Notes -->
-                        <div class="col-md-6 mb-4">
-                            <div class="card overflow-hidden shadow rounded-4 border-0 h-100">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-3">
-                                            <h4 class="fw-bolder">Secure Notes</h4>
-                                            <p>
-                                                Aplikasi Secure Notes berbasis Spring Security dengan implementasi OAuth2, JWT, dan Multi-Factor Authentication (MFA) 
-                                                untuk membangun sistem autentikasi dan otorisasi yang aman.
-                                            </p>
-                                            <p>
-                                                Tech Stack:
-                                                Java 17, Spring Boot 3, Spring Security, JWT, OAuth2, MFA (Google Authenticator), Spring Data JPA, MySQL, Spring Mail, Maven, Lombok.
-                                            </p>
-                                            <a href="https://github.com/mohammadsulaeman/SecureNotes.git" target="_blank">Github Repository</a>
-                                        </div>
-                                        <div class="img-fluid">
-                                            <video width="320" height="240" controls>
-                                                <source src="assets/video/securenotes.mp4" type="video/mp4">
-                                            </video>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                       
-                        <!-- Docker Run Image MySQL dengan DBeaver -->
-                         <div class="col-md-6 mb-4">
-                            <div class="card overflow-hidden shadow rounded-4 border-0 h-100">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-3">
-                                            <h4 class="fw-bolder">Docker MySQL</h4>
-                                            <p>
-                                                Implementasi Docker Image MySQL dan konfigurasi container untuk memahami proses deployment database serta konektivitas menggunakan DBeaver.
-                                            </p>
-                                            <p>
-                                                Tech Stack : Docker version 29.2.0, Docker Image MySQL 8.0.45
-                                            </p>
-                                        </div>
-                                        <div class="img-fluid">
-                                            <video width="320" height="240" controls>
-                                                <source src="assets/video/dockerrunimagemysql.mp4" type="video/mp4">
-                                            </video>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    
+                   <div class="container py-5">
 
-                        <!-- Docker Run Image PostgresSQL dengan DBeaver -->
-                         <div class="col-md-6 mb-4">
-                            <div class="card overflow-hidden shadow rounded-4 border-0 h-100">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-3">
-                                            <h4 class="fw-bolder">Docker PostgreSQL</h4>
-                                            <p>
-                                                Implementasi Docker Image PostgreSQL dan konfigurasi container untuk memahami proses deployment database serta konektivitas menggunakan DBeaver.
-                                            </p>
-                                            <p>
-                                                 Tech Stack : Docker version 29.2.0, Docker Image Postgres 18
-                                            </p>
-                                        </div>
-                                        <div class="img-fluid">
-                                            <video width="320" height="240" controls>
-                                                <source src="assets/video/dockerrunpostgres.mp4" type="video/mp4">
-                                            </video>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <h2 class="text-center mb-4">
+                            Eksplorasi Teknologi
+                        </h2>
 
-                        <!-- Windows Form Application .NET -->
-                        <div class="col-md-6 mb-4">
-                            <div class="card overflow-hidden shadow rounded-4 border-0 h-100">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-3">
-                                            <h4 class="fw-bolder">Personel Tracking </h4>
-                                            <p>
-                                               Pengembangan aplikasi desktop berbasis Windows Forms (C#) dengan integrasi Microsoft SQL Server menggunakan 
-                                               pendekatan LINQ to SQL sebagai ORM untuk pengelolaan data personel secara terstruktur, efisien, dan terintegrasi.
-                                            </p>
-                                            <p>
-                                                 Tech Stack : C#, Microsoft SQL Server, LINQ to SQL, Windows Forms
-                                            </p>
-                                            <a href="https://github.com/mohammadsulaeman/PersonelTrackingUser" target="_blank">Github Repository</a>
+                        <div class="table-responsive">
+
+                            <table class="table table-bordered table-hover align-middle bg-white">
+
+                                <thead class="table-dark">
+                                <tr>
+                                    <th width="80">No</th>
+                                    <th>Technology</th>
+                                    <th width="180">Total Project</th>
+                                    <th width="120">Action</th>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+
+                                
+
+                                <!-- SPRING BOOT -->
+                                <tr>
+                                    <td>1</td>
+                                    <td>Spring Boot Frameworks</td>
+                                    <td>3</td>
+                                    <td>
+                                        <button class="btn btn-primary btn-sm"
+                                                onclick="toggleProjects('springsProjects','springsDetail')">
+                                            Detail
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr id="springsProjects" class="project-row">
+                                    <td colspan="4">
+
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <h4>Spring Boot Projects</h4>
+
+                                            <button class="btn btn-danger btn-sm"
+                                                    onclick="closeProjects('springsProjects','springsDetail')">
+                                                Close List
+                                            </button>
                                         </div>
-                                        <div class="img-fluid">
-                                            <video width="320" height="240" controls>
-                                                <source src="assets/video/personeltracking.mp4" type="video/mp4">
-                                            </video>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
+                                        <div class="list-group">
+
+                                            <button class="list-group-item list-group-item-action project-item"
+                                                    onclick="showProject(
+                                                    'Spring Boot Apache Kafka',
+                                                    'Mengembangkan aplikasi streaming data menggunakan Spring Boot dengan memanfaatkan Wikimedia EventStreams sebagai sumber data real-time. Aplikasi mengonsumsi event melalui Server-Sent Events (SSE), menerbitkan data ke Apache Kafka sebagai message broker, kemudian diproses oleh Kafka Consumer dan disimpan ke dalam database MySQL. Implementasi ini mendukung pemrosesan data secara asynchronous,meningkatkan skalabilitas sistem, serta memungkinkan analisis data secara real-time',
+                                                    'Java 17, Spring Boot, Apache Kafka, MySQL, Server-Sent Events (SSE), Jackson, Maven',
+                                                    'assets/video/spring/Springbootapachekafka.mp4',
+                                                    'https://github.com/mohammadsulaeman/spring-boot-kafka-realtime-real-project-',
+                                                    'springsDetail'
+                                                    )">
+                                                Spring Boot Apache Kafka
+                                            </button>
+
+                                            <button class="list-group-item list-group-item-action project-item"
+                                                    onclick="showProject(
+                                                    'Secures Notes',
+                                                    'Mengembangkan aplikasi Secure Notes berbasis web menggunakan Spring Boot sebagai REST API backend dan React sebagai frontend. Sistem dilengkapi dengan Spring Security untuk autentikasi dan otorisasi pengguna, sehingga setiap pengguna hanya dapat mengakses dan mengelola catatan miliknya sendiri. Aplikasi mendukung fitur registrasi, login, manajemen profil, serta operasi CRUD (Create, Read,Update, Delete) pada catatan dengan komunikasi data melalui REST API.',
+                                                    'Java 17, Spring Boot, Spring Security, Spring Data JPA (Hibernate), MySQL, React, Axios, Maven, JWT Authentication',
+                                                    'assets/video/spring/securenotes.mp4',
+                                                    'https://github.com/mohammadsulaeman/SecureNotes',
+                                                    'springsDetail'
+                                                    )">
+                                                Secures Notes
+                                            </button>
 
 
-                        <!-- Windows Form Application .NEt -->
-                         <div class="col-md-6 mb-4">
-                            <div class="card overflow-hidden shadow rounded-4 border-0 h-100">
-                                <div class="card-body p-0">
-                                    <div class="d-flex align-items-center">
-                                        <div class="p-3">
-                                            <h4 class="fw-bolder">Stock Tracking </h4>
-                                            <p>
-                                               Pengembangan aplikasi desktop berbasis Windows Forms (C#) dengan integrasi Microsoft SQL Server menggunakan 
-                                               pendekatan Facade Design Pattern serta ADO.NET Entity Data Model sebagai ORM untuk pengelolaan data stock personel secara terstruktur, efisien, dan terintegrasi.
-                                            </p>
-                                            <p>
-                                                 Tech Stack : C#, Microsoft SQL Server, ADO.NET Entity Data Model, Windows Forms,Facade Design Pattern
-                                            </p>
-                                            <a href="https://github.com/mohammadsulaeman/StockingTracking.git" target="_blank">Github Repository</a>
+                                             <button class="list-group-item list-group-item-action project-item"
+                                                    onclick="showProject(
+                                                    'Secure Biodata API',
+                                                    'Mengembangkan RESTful API untuk pengelolaan data biodata menggunakan Spring Boot. Aplikasi menyediakan fitur CRUD (Create, Read, Update, Delete) dengan mekanisme autentikasi berbasis token HMAC-SHA256 untuk mengamankan akses API. Data dikelola menggunakan Spring Data JPA dan PostgreSQL, sementara validasi input diterapkan menggunakan Bean Validation. Dokumentasi API disediakan melalui Springdoc OpenAPI (Swagger UI), dan MapStruct digunakan untuk mempermudah proses pemetaan antara Entity dan DTO.',
+                                                    'Java 17, Spring Boot, Spring Web MVC, Spring Data JPA (Hibernate), PostgreSQL, Bean Validation, HMAC-SHA256 Token Authentication, Springdoc OpenAPI (Swagger UI), MapStruct, Lombok, Gson, Maven',
+                                                    'assets/video/spring/securebiodataapi.mp4',
+                                                    'https://github.com/mohammadsulaeman/SPRING_BOOT_RESTAPI_BASE64_HMACSHA256',
+                                                    'springsDetail'
+                                                    )">
+                                               Secure Biodata API
+                                            </button>
+
                                         </div>
-                                        <div class="img-fluid">
-                                            <video width="320" height="240" controls>
-                                                <source src="assets/video/stocktracking.mp4" type="video/mp4">
-                                            </video>
+
+                                        <!-- DETAIL -->
+                                        <div class="card mt-4 springs-container" id="springsDetail">
+
+                                            <div class="card-header d-flex justify-content-between align-items-center">
+
+                                                <h4 class="projectTitle mb-0"></h4>
+
+                                                <button class="btn btn-secondary btn-sm closeDetailBtn"
+                                                        onclick="closeDetail('springsDetail')">
+                                                    Close Detail
+                                                </button>
+
+                                            </div>
+
+                                            <div class="card-body">
+
+                                                <h5>Deskripsi</h5>
+                                                <p class="projectDescription"></p>
+
+                                                <hr>
+
+                                                <h5>Spesifikasi</h5>
+                                                <p class="projectSpecification"></p>
+
+                                                <hr>
+
+                                                <h5>Github Repository</h5>
+                                                <p class="projectGithub"></p>
+
+                                                <h5>Video Project</h5>
+
+                                                <video controls class="projectVideo">
+                                                    <source src="" type="video/mp4">
+                                                </video>
+
+                                            </div>
+
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
+
+                                    </td>
+                                </tr>
+
+                                <!-- Quarkus Project -->
+                                 <tr>
+                                    <td>2</td>
+                                    <td>Quarkus Frameworks</td>
+                                    <td>1</td>
+                                    <td>
+                                        <button class="btn btn-primary btn-sm"
+                                                onclick="toggleProjects('quarkusProjects','quarkusDetail')">
+                                            Detail
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                <tr id="quarkusProjects" class="project-row">
+                                    <td colspan="4">
+
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <h4>Quarkus Projects</h4>
+
+                                            <button class="btn btn-danger btn-sm"
+                                                    onclick="closeProjects('quarkusProjects','quarkusDetail')">
+                                                Close List
+                                            </button>
+                                        </div>
+
+                                        <div class="list-group">
+
+                                            
+
+                                            <button class="list-group-item list-group-item-action project-item"
+                                                    onclick="showProject(
+                                                    'Secure Games API',
+                                                    'Mengembangkan aplikasi RESTful API menggunakan Quarkus dengan menerapkan operasi CRUD,autentikasi dan otorisasi berbasis JWT, serta PostgreSQL sebagai database utama. Aplikasi dibangun menggunakan Hibernate ORM Panache untuk mempermudah pengelolaan data, Flyway untuk versioning database, dan OpenAPI/Swagger sebagai dokumentasi API. Implementasi keamanan memastikan hanya pengguna yang telah terautentikasi yang dapat mengakses endpoint yang dilindungi.',
+                                                    'Java 17, Quarkus 3, Hibernate ORM Panache, PostgreSQL, Flyway, SmallRye JWT,BCrypt, RESTEasy Reactive, OpenAPI (Swagger UI), Maven',
+                                                    'assets/video/spring/quarkus.mp4',
+                                                    'https://github.com/mohammadsulaeman/quarkus',
+                                                    'quarkusDetail'
+                                                    )">
+                                                Secure Games API
+                                            </button>
+
+                                            
+
+                                        </div>
+
+                                        <!-- DETAIL -->
+                                        <div class="card mt-4 springs-container" id="quarkusDetail">
+
+                                            <div class="card-header d-flex justify-content-between align-items-center">
+
+                                                <h4 class="projectTitle mb-0"></h4>
+
+                                                <button class="btn btn-secondary btn-sm closeDetailBtn"
+                                                        onclick="closeDetail('quarkusDetail')">
+                                                    Close Detail
+                                                </button>
+
+                                            </div>
+
+                                            <div class="card-body">
+
+                                                <h5>Deskripsi</h5>
+                                                <p class="projectDescription"></p>
+
+                                                <hr>
+
+                                                <h5>Spesifikasi</h5>
+                                                <p class="projectSpecification"></p>
+
+                                                <hr>
+
+                                                <h5>Github Repository</h5>
+                                                <p class="projectGithub"></p>
+
+                                                <h5>Video Project</h5>
+
+                                                <video controls class="projectVideo">
+                                                    <source src="" type="video/mp4">
+                                                </video>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                </tbody>
+
+                            </table>
+
                         </div>
+
                     </div>
+                    
                 </div>
+
+               
             </section>
-            
-            <!-- Call to action section-->
-            <!-- <section class="py-5 bg-gradient-primary-to-secondary text-white">
-                <div class="container px-5 my-5">
-                    <div class="text-center">
-                        <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
-                        <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="contact.html">Contact me</a>
-                    </div>
-                </div>
-            </section> -->
         </main>
-        <!-- Footer-->
-        <!-- <footer class="bg-white py-4 mt-auto">
-            <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0">Copyright &copy; Start Bootstrap 2023</div></div>
-                 
-                </div>
-            </div>
-        </footer> -->
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->

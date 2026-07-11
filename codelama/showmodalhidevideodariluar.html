@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Project</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            padding:40px;
+        }
+
+        .project-link{
+            cursor:pointer;
+            text-decoration:none;
+            font-weight:600;
+        }
+
+        .project-link:hover{
+            text-decoration:underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tampilan Awal -->
+    <div id="homeSection">
+        <h3>Portfolio</h3>
+
+        <span class="project-link text-primary"
+              onclick="showProjectList()">
+            Lihat Daftar Project
+        </span>
+    </div>
+
+    <!-- List Project -->
+    <div id="projectSection" class="d-none mt-4">
+
+        <div class="card shadow-sm">
+            <div class="card-header">
+                <h5 class="mb-0">Daftar Project</h5>
+            </div>
+
+            <div class="card-body">
+
+                <ul class="list-group">
+
+                    <li class="list-group-item">
+                        <a href="#"
+                           class="text-decoration-none"
+                           onclick="openProject(
+                                'Hospital Dashboard',
+                                'Dashboard monitoring rumah sakit menggunakan Spring Boot, SQL Server, dan DevExtreme Chart.',
+                                'https://www.youtube.com/embed/ysz5S6PUM-U'
+                           )">
+                            Project 1 - Hospital Dashboard
+                        </a>
+                    </li>
+
+                    <li class="list-group-item">
+                        <a href="#"
+                           class="text-decoration-none"
+                           onclick="openProject(
+                                'Investment Application',
+                                'Aplikasi investasi menggunakan Spring Boot, Redis, MySQL, dan Microservices.',
+                                'https://www.youtube.com/embed/jNQXAC9IVRw'
+                           )">
+                            Project 2 - Investment Application
+                        </a>
+                    </li>
+
+                    <li class="list-group-item">
+                        <a href="#"
+                           class="text-decoration-none"
+                           onclick="openProject(
+                                'E-Commerce Website',
+                                'Website e-commerce dengan Angular dan REST API.',
+                                'https://www.youtube.com/embed/dQw4w9WgXcQ'
+                           )">
+                            Project 3 - E-Commerce Website
+                        </a>
+                    </li>
+
+                </ul>
+
+                <button class="btn btn-danger mt-3"
+                        onclick="backHome()">
+                    Kembali
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade"
+         id="projectModal"
+         tabindex="-1">
+
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title" id="projectTitle"></h4>
+
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal">
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="row">
+
+                        <div class="col-md-5">
+                            <h5>Deskripsi Project</h5>
+
+                            <p id="projectDescription"></p>
+                        </div>
+
+                        <div class="col-md-7">
+
+                            <h5>Demo Video</h5>
+
+                            <div class="ratio ratio-16x9">
+                                <iframe id="projectVideo"
+                                        src=""
+                                        allowfullscreen>
+                                </iframe>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary"
+                            data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+        const modalElement = document.getElementById('projectModal');
+        const projectModal = new bootstrap.Modal(modalElement);
+
+        function showProjectList() {
+            document.getElementById('homeSection')
+                .classList.add('d-none');
+
+            document.getElementById('projectSection')
+                .classList.remove('d-none');
+        }
+
+        function backHome() {
+            document.getElementById('projectSection')
+                .classList.add('d-none');
+
+            document.getElementById('homeSection')
+                .classList.remove('d-none');
+        }
+
+        function openProject(title, description, videoUrl) {
+
+            document.getElementById('projectTitle')
+                .innerText = title;
+
+            document.getElementById('projectDescription')
+                .innerText = description;
+
+            document.getElementById('projectVideo')
+                .src = videoUrl;
+
+            projectModal.show();
+        }
+
+        // menghentikan video saat modal ditutup
+        modalElement.addEventListener('hidden.bs.modal', function () {
+            document.getElementById('projectVideo').src = '';
+        });
+
+    </script>
+
+</body>
+</html>

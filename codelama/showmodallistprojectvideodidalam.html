@@ -1,0 +1,233 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Project</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            background-color:#f5f5f5;
+            padding:50px;
+        }
+
+        .portfolio-title{
+            text-align:center;
+            margin-bottom:30px;
+        }
+
+        .project-link{
+            cursor:pointer;
+            font-size:18px;
+            font-weight:bold;
+            color:#0d6efd;
+        }
+
+        .project-link:hover{
+            text-decoration:underline;
+        }
+
+        .list-group-item{
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .list-group-item:hover{
+            background:#f8f9fa;
+        }
+
+        .video-container video{
+            border-radius:10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Tampilan Awal -->
+    <div id="homeSection" class="text-center">
+        <h1 class="portfolio-title">My Portfolio</h1>
+
+        <span class="project-link"
+              onclick="showProjectList()">
+            Lihat Daftar Project
+        </span>
+    </div>
+
+    <!-- List Project -->
+    <div id="projectSection" class="d-none">
+
+        <div class="card shadow">
+            <div class="card-header">
+                <h4 class="mb-0">Daftar Project</h4>
+            </div>
+
+            <div class="card-body">
+
+                <ul class="list-group">
+
+                    <li class="list-group-item"
+                        onclick="openProject(
+                            'Hospital Dashboard',
+                            'Dashboard rumah sakit menggunakan Spring Boot, SQL Server, Redis dan DevExtreme Chart.',
+                            'videos/project1.mp4'
+                        )">
+                        Project 1 - Hospital Dashboard
+                    </li>
+
+                    <li class="list-group-item"
+                        onclick="openProject(
+                            'Investment Application',
+                            'Aplikasi investasi berbasis Spring Boot, MySQL dan Microservices.',
+                            'videos/project2.mp4'
+                        )">
+                        Project 2 - Investment Application
+                    </li>
+
+                    <li class="list-group-item"
+                        onclick="openProject(
+                            'E-Commerce Platform',
+                            'Website e-commerce menggunakan Angular dan REST API.',
+                            'videos/project3.mp4'
+                        )">
+                        Project 3 - E-Commerce Platform
+                    </li>
+
+                </ul>
+
+                <button class="btn btn-danger mt-4"
+                        onclick="backHome()">
+                    Kembali
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade"
+     id="projectModal"
+     tabindex="-1">
+
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h3 id="projectTitle"></h3>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <h5>Deskripsi Project</h5>
+
+                        <p id="projectDescription"></p>
+                    </div>
+
+                    <div class="col-md-8 video-container">
+                        <h5>Demo Video</h5>
+
+                        <video id="projectVideo"
+                               class="w-100"
+                               controls>
+                            <source id="videoSource"
+                                    src=""
+                                    type="video/mp4">
+                            Browser Anda tidak mendukung video.
+                        </video>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                    Close
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+    const modalElement = document.getElementById('projectModal');
+    const projectModal = new bootstrap.Modal(modalElement);
+
+    function showProjectList(){
+        document.getElementById("homeSection")
+            .classList.add("d-none");
+
+        document.getElementById("projectSection")
+            .classList.remove("d-none");
+    }
+
+    function backHome(){
+        document.getElementById("projectSection")
+            .classList.add("d-none");
+
+        document.getElementById("homeSection")
+            .classList.remove("d-none");
+    }
+
+    function openProject(title, description, videoPath){
+
+        document.getElementById("projectTitle")
+            .innerText = title;
+
+        document.getElementById("projectDescription")
+            .innerText = description;
+
+        const video = document.getElementById("projectVideo");
+        const source = document.getElementById("videoSource");
+
+        source.src = videoPath;
+
+        video.load();
+
+        projectModal.show();
+    }
+
+    modalElement.addEventListener('shown.bs.modal', function () {
+        document.getElementById('projectVideo').play();
+    });
+
+    modalElement.addEventListener('hidden.bs.modal', function () {
+
+        const video = document.getElementById('projectVideo');
+
+        video.pause();
+        video.currentTime = 0;
+
+        document.getElementById('videoSource').src = '';
+
+        video.load();
+    });
+
+</script>
+
+</body>
+</html>
+```
